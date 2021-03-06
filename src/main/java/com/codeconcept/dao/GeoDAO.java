@@ -1,4 +1,4 @@
-package com.codeconcept.DAO;
+package com.codeconcept.dao;
 
 import org.springframework.stereotype.Component;
 

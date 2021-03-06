@@ -1,6 +1,6 @@
 package com.codeconcept.service;
 
-import com.codeconcept.DAO.GeoDAO;
+import com.codeconcept.dao.GeoDAO;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,14 +1,14 @@
-com/codeconcept/service/GeoService.java
- com.codeconcept.service.GeoService
-com/codeconcept/DAO/GeoDAO.java
- com.codeconcept.DAO.GeoDAO
-com/codeconcept/TravelCompanyApplication.java
- com.codeconcept.TravelCompanyApplication
-com/codeconcept/TravelAppController.java
- com.codeconcept.TravelAppController
 com/codeconcept/ServletInitializer.java
  com.codeconcept.ServletInitializer
 com/codeconcept/service/IGeoService.java
  com.codeconcept.service.IGeoService
+com/codeconcept/TravelCompanyApplication.java
+ com.codeconcept.TravelCompanyApplication
+com/codeconcept/TravelAppController.java
+ com.codeconcept.TravelAppController
+com/codeconcept/service/GeoService.java
+ com.codeconcept.service.GeoService
+com/codeconcept/DAO/GeoDAO.java
+ com.codeconcept.DAO.GeoDAO
 com/codeconcept/controller/GeoDAOController.java
  com.codeconcept.controller.GeoDAOController

@@ -2,13 +2,10 @@ package com.codeconcept.controller;
 
 import com.codeconcept.service.GeoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/design", produces = "application/json")
+@RequestMapping(path = "/", produces = "application/json")
 @CrossOrigin(origins = "*")
 public class GeoDAOController {
     @Autowired
@@ -18,9 +15,10 @@ public class GeoDAOController {
         this.geoService = geoService;
     }
 
-    @GetMapping("/recent")
-    public String getJSON() throws Exception{
+    @GetMapping("/time/walk/{source}/{destination}")
+    public String getJSON(@PathVariable String source, @PathVariable String destination) throws Exception{
 
         return geoService.getJSON("http://resources.codeconcept.pl/api/distance/");
+//        return source +" "+ destination;
     }
 }

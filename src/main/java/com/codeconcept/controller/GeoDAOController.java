@@ -39,7 +39,14 @@ public class GeoDAOController {
             distance.setDistance(distance1);
             allDistances.add(distance);
         }
-        allDistances.forEach(System.out::println);
+        for (DistanceDTO distance : allDistances) {
+            System.out.println(distance);
+            if (source1 == distance.getSource()) {
+                System.out.println("OK");
+            }
+            System.out.println("NotOK");
+        }
+//        allDistances.forEach(System.out::println);
         return geoService.getJSON("http://resources.codeconcept.pl/api/distance/");
 //        return source +" "+ destination;
     }

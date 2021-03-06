@@ -22,7 +22,7 @@ public class GeoDAOController {
     }
 
     @GetMapping("/time/walk/{source1}/{destination1}")
-    public String getJSON(@PathVariable String source1, @PathVariable String destination1) throws Exception {
+    public int getJSON(@PathVariable String source1, @PathVariable String destination1) throws Exception {
         List<DistanceDTO> allDistances = new ArrayList<>();
         String rawString = geoService.getJSON("http://resources.codeconcept.pl/api/distance/");
         JSONObject root = new JSONObject(rawString);
@@ -40,14 +40,13 @@ public class GeoDAOController {
             allDistances.add(distance);
         }
         for (DistanceDTO distance : allDistances) {
-            System.out.println(distance);
-            if (source1 == distance.getSource()) {
-                System.out.println("OK");
+            if (distance.getSource().equals(source1)&&distance.getDestination().equals(destination1)) {
+                System.out.println(distance.getDistance());
+                return distance.getDistance();
             }
-            System.out.println("NotOK");
         }
 //        allDistances.forEach(System.out::println);
-        return geoService.getJSON("http://resources.codeconcept.pl/api/distance/");
-//        return source +" "+ destination;
+//        return geoService.getJSON("http://resources.codeconcept.pl/api/distance/");
+        return 1;
     }
 }

@@ -2,15 +2,15 @@ com/codeconcept/service/TimeResponse.java
  com.codeconcept.service.TimeResponse
 com/codeconcept/TravelCompanyApplication.java
  com.codeconcept.TravelCompanyApplication
-com/codeconcept/service/IGeoService.java
- com.codeconcept.service.IGeoService
 com/codeconcept/ServletInitializer.java
  com.codeconcept.ServletInitializer
+com/codeconcept/service/IGeoService.java
+ com.codeconcept.service.IGeoService
 com/codeconcept/dto/DistanceDTO.java
  com.codeconcept.dto.DistanceDTO
-com/codeconcept/service/GeoService.java
- com.codeconcept.service.GeoService
 com/codeconcept/dao/GeoDAO.java
  com.codeconcept.dao.GeoDAO
+com/codeconcept/service/GeoService.java
+ com.codeconcept.service.GeoService
 com/codeconcept/controller/GeoDAOController.java
  com.codeconcept.controller.GeoDAOController

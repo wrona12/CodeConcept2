@@ -16,7 +16,7 @@ import java.util.List;
 public class GeoService implements IGeoService {
     GeoDAO geoDAO;
 
-    public TimeResponse getWalkTime(String source1, String destination1) throws Exception{
+    public TimeResponse getWalkTime(String source1, String destination1) throws Exception {
         List<DistanceDTO> allDistances = new ArrayList<>();
 
         String rawString = geoDAO.request("http://resources.codeconcept.pl/api/distance/");
@@ -36,7 +36,8 @@ public class GeoService implements IGeoService {
             allDistances.add(distance);
         }
         for (DistanceDTO distance : allDistances) {
-            if (distance.getSource().equals(source1) && distance.getDestination().equals(destination1)) {
+            if (distance.getSource().equals(source1) && distance.getDestination().equals(destination1)||distance.getDestination().equals(source1)&&distance.getSource().equals(destination1)) {
+
                 TimeResponse timeResponse = new TimeResponse();
                 int travelTime;
                 int v = 6;
@@ -48,11 +49,8 @@ public class GeoService implements IGeoService {
         }
         return null;
     }
+
     public GeoService(GeoDAO geoDAO) {
         this.geoDAO = geoDAO;
-    }
-
-    public String getJSON(String adres) throws Exception{
-        return geoDAO.request(adres);
     }
 }

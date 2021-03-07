@@ -8,11 +8,11 @@ com/codeconcept/ServletInitializer.java
  com.codeconcept.ServletInitializer
 com/codeconcept/service/IGeoService.java
  com.codeconcept.service.IGeoService
-com/codeconcept/controller/GeoDAOController.java
- com.codeconcept.controller.GeoDAOController
-com/codeconcept/dao/GeoDAO.java
- com.codeconcept.dao.GeoDAO
 com/codeconcept/dto/DistanceDTO.java
  com.codeconcept.dto.DistanceDTO
+com/codeconcept/dao/GeoDAO.java
+ com.codeconcept.dao.GeoDAO
 com/codeconcept/service/TimeResponse.java
  com.codeconcept.service.TimeResponse
+com/codeconcept/controller/GeoDAOController.java
+ com.codeconcept.controller.GeoDAOController

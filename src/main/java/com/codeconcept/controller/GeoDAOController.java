@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class GeoDAOController {
     }
 
     @GetMapping("/time/walk/{source1}/{destination1}")
-    public TimeResponse getJSON(@PathVariable String source1, @PathVariable String destination1) throws Exception {
+    public TimeResponse walkTime(@PathVariable String source1, @PathVariable String destination1) throws Exception {
         List<DistanceDTO> allDistances = new ArrayList<>();
         String rawString = geoService.getJSON("http://resources.codeconcept.pl/api/distance/");
         JSONObject root = new JSONObject(rawString);
@@ -43,16 +44,15 @@ public class GeoDAOController {
         }
         for (DistanceDTO distance : allDistances) {
             if (distance.getSource().equals(source1) && distance.getDestination().equals(destination1)) {
-                TimeResponse timeResponse  = new TimeResponse();
-                timeResponse.setTime(distance.getDistance());
+                TimeResponse timeResponse = new TimeResponse();
+                int travelTime;
+                int v = 6;
+                travelTime = distance.getDistance() / v;
+                int travelTimeMinutes = travelTime * 60;
+                timeResponse.setTime(travelTimeMinutes);
                 return timeResponse;
             }
         }
         return null;
-    }
-
-    @GetMapping(value = "/bartek")
-    public String getBartek() {
-        return "Bartek";
     }
 }

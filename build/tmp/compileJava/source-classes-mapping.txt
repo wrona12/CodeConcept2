@@ -10,7 +10,7 @@ com/codeconcept/dto/DistanceDTO.java
  com.codeconcept.dto.DistanceDTO
 com/codeconcept/service/GeoService.java
  com.codeconcept.service.GeoService
-com/codeconcept/controller/GeoDAOController.java
- com.codeconcept.controller.GeoDAOController
 com/codeconcept/dao/GeoDAO.java
  com.codeconcept.dao.GeoDAO
+com/codeconcept/controller/GeoDAOController.java
+ com.codeconcept.controller.GeoDAOController

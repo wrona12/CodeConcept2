@@ -15,7 +15,6 @@ public class GeoDAO {
 
         StringBuilder sb = new StringBuilder();
 
-//        "http://resources.codeconcept.pl/api/distance/"
         URL url = new URL(endpoint);
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 

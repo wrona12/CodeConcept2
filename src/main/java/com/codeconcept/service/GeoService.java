@@ -2,6 +2,7 @@ package com.codeconcept.service;
 
 import com.codeconcept.dao.GeoDAO;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 @Component
 public class GeoService implements IGeoService {
